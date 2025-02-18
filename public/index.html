@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Eric Leblanc - School of Computer Science</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        h2 {
+            font-size: 1.5em;
+            color: #555;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        a:visited {
+            color: inherit;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+        }
+        .footer-container {
+            display: flex;
+            align-items: center;
+        }
+        .footer-container > * {
+            margin-right: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Eric Leblanc</h1>
+</header>
+
+<div class="container">
+    <h2>Hi!</h2>
+    <p>I'm Eric Leblanc, an <a href="https://carleton.ca/scs/future-students/graduate-studies/programs/">MCS student</a> as of September 2025.</p>
+
+    <h2>Stay Tuned!</h2>
+    <p>I'll be adding content to this page eventually. Please check back later!</p>
+</div>
+
+<footer>
+<div class="footer-container">
+    <!-- Github SVG -->
+    <a href="https://github.com/ericleb010/scs-user-page">
+        <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 16 16" width="28" aria-hidden="true" class="d-block">
+            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+        </svg>
+    </a>
+    <!-- Commit badge -->
+    <div id="commit-badge"></div>
+</div>
+</footer>
+
+</body>
+
+<script>
+    let badgeNode = document.getElementById("commit-badge")
+
+    fetch('./VERSION')
+        .then(response => response.text())
+        .then(contents => {
+            const versionDesc = contents.trim();
+            const version = versionDesc.split(" ")[0];
+
+            let badgeColor = "green"
+            if (versionDesc != version) {
+                badgeColor = "red"
+            }
+
+            const anchorNode = document.createElement("a");
+            anchorNode.href = `https://github.com/ericleb010/scs-user-page/tree/${version}`;
+            badgeNode.append(anchorNode)
+
+            const imgNode = new Image()
+            imgNode.alt = "Commit"
+            imgNode.src = `https://img.shields.io/badge/Commit-${versionDesc}-${badgeColor}`
+            anchorNode.append(imgNode)
+        })
+        .catch(error => {
+            console.error('Error loading version:', error);
+        });
+</script>
+</html>

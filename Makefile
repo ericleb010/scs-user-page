@@ -1,4 +1,4 @@
-hostname := theta01.scs.carleton.ca
+hostname := gta
 local_public_folder := ./public
 remote_public_folder := ~/public_html
 
@@ -11,11 +11,11 @@ endif
 all: build
 
 deploy: build secure
-	rsync -rp --exclude-from=".rsyncignore" --delete "$(local_public_folder)/" "$(hostname):${remote_public_folder}/"
+	rsync -rp --exclude-from=".rsyncignore" "$(local_public_folder)/" "$(hostname):${remote_public_folder}/"
 
 secure:
-	find ./public -type f -execdir chmod 644 '{}' \;
-	find ./public -mindepth 1 -type d -execdir chmod 711 '{}' \;
+	find ./public -maxdepth 1 -type f -execdir chmod 644 '{}' \;
+	chmod 711 ./public
 
 build:
 	echo $(git_hash)$(dirty_indicator) > $(local_public_folder)/VERSION

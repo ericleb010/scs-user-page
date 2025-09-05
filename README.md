@@ -1,6 +1,6 @@
 ## My SCS Homepage
 
-> https://people.scs.carleton.ca/~ericleblanc/
+> https://ccsl.carleton.ca/~eleblanc/
 
 ### Instructions
 

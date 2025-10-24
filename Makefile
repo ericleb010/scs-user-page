@@ -21,4 +21,8 @@ build:
 	echo $(git_hash)$(dirty_indicator) > $(local_public_folder)/VERSION
 	@echo "Build complete"
 
-.PHONY: all build deploy
+preview:
+	nohup open "http://localhost:8000" > /dev/null
+	python3 -m http.server -d ./public 8000
+
+.PHONY: all build deploy preview

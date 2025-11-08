@@ -5,90 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Eric Leblanc - Carleton Computer Security Lab (CCSL)</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2em;
-        }
-        h2 {
-            font-size: 1.5em;
-            color: #555;
-            margin-top: 35px;
-        }
-        p {
-            font-size: 1.2em;
-        }
-        a {
-            color: inherit;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            display: flex;
-            justify-content: center;
-            padding-top: 13px;
-            padding-bottom: 10px;
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-        }
-        .footer-container {
-            display: flex;
-            align-items: center;
-        }
-        .footer-container > * {
-            margin-right: 13px;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
 
 <header>
-    <h1>Eric Leblanc</h1>
+    <div class="site"></div>
 </header>
 
-<div class="container">
-    <h2>Hi!</h2>
-    <p>I'm Eric Leblanc, an <a href="https://carleton.ca/scs/future-students/graduate-studies/programs/">MCS student</a> and member of the <a href="https://ccsl.carleton.ca/">Carleton Computer Security Lab</a>. My work is being supervised by <a href="https://people.scs.carleton.ca/~paulv/">Dr. Paul Van Oorschot</a>.</p>
+<main class="site" role="main">
+    <section class="hero" aria-label="Intro">
+        <div class="photo" aria-hidden="false">
+            <img src="./img/face.jpeg" alt="Eric Leblanc professional photo" />
+        </div>
+        <div class="intro">
+            <h2>Eric Leblanc</h2>
+            <p class="lead">I'm an <a href="https://carleton.ca/scs/future-students/graduate-studies/programs/">MCS student</a> and member of the <a href="https://ccsl.carleton.ca/">Carleton Computer Security Lab</a>, supervised by <a href="https://people.scs.carleton.ca/~paulv/">Dr. Paul Van Oorschot</a>. I'm working on problems in self-sovereign identity and digital identity wallets.</p>
+            <div class="quick-links">
+                <p class="quick-link">Email: <a href="mailto:ericleblanc@cmail.carleton.ca">ericleblanc@cmail.carleton.ca</a></p>
+                <p class="quick-link">Quick links: <a href="#research">Research</a> · <a href="#education">Education</a> · <a href="#academic">Academic</a> · <a href="#industrial">Industry</a></p>
+            </div>
+        </div>
+    </section>
 
-    <h2>Stay Tuned!</h2>
-    <p>I'll be adding content to this page eventually. Please check back later!</p>
-</div>
+    <section id="research" class="section" aria-labelledby="research-heading">
+        <h2 id="research-heading">Research interests</h2>
+        <p>I'm interested in the topic of digital identity wallets and self-sovereign identities, and their applications in the safeguarding of user privacy, digital credential verification, and online voting.</p>
+        <ul class="list">
+            <li>Self-sovereign digital identities, protocols, and authentication</li>
+            <li>Digital identity wallet applications and architectures</li>
+            <li>Online pseudonymity</li>
+            <li>Electronic voting and digital democracy</li>
+        </ul>
+    </section>
+
+    <section id="education" class="section" aria-labelledby="education-heading">
+        <h2 id="education-heading">Education</h2>
+        <ul class="list list-unstyled">
+            <li class="list-item-with-room"><b>Master of Computer Science</b> (pending) &ndash; Carleton University (2027)</li>
+            <li><b>Bachelor of Computing, Computer Science</b> &ndash; University of Guelph (2016)</li>
+        </ul>
+    </section>
+
+    <section id="academic" class="section" aria-labelledby="academic-heading">
+        <h2 id="academic-heading">Academic experience</h2>
+        <p><b>Teaching assistant</b> &ndash; Carleton University (2025 &ndash; present)</p>
+        <ul class="list">
+            <li>COMP 4108, <i>Computer Systems Security</i> (Fall 2025)</li>
+        </ul>
+        <p><b>Teaching assistant</b> &ndash; Mount Allison University (2014 &ndash; 2015)</p>
+        <ul class="list">
+            <li>COMP 1631, <i>Introduction to Computer Science</i> (Winter 2014, Winter 2015)</li>
+            <li>MATH 2221, <i>Linear Algebra</i> (Fall 2014)</li>
+        </ul>
+    </section>
+
+    <section id="industrial" class="section" aria-labelledby="industrial-heading">
+        <h2 id="industrial-heading">Industrial experience</h2>
+        <p><b>Senior Software Engineer</b> &ndash; Synctera (2021 &ndash; 2025)</p>
+        <ul class="list">
+            <li>Feature lead for over five different projects, particularly focused on lending product offerings.</li>
+            <li>Maintained and greatly improved critical event-driven architecture to handle end-of-day banking actions.</li>
+            <li>Mentored other engineers as they joined the team.</li>
+        </ul>
+        <p><b>Full Stack Software Lead</b> &ndash; Toxon Technologies (2020 &ndash; 2021)</p>
+        <ul class="list">
+            <li>Managed a team of three engineers to relaunch an existing iOS / Android application.</li>
+            <li>Spun up and maintained a new back-end from scratch in AWS.</li>
+            <li>Created Auth0 tenants for user authentication and management, and migrated users from the old system into the new.</li>
+        </ul>
+        <p><b>Full Stack Developer</b> &ndash; Innovyze (2020)</p>
+        <ul class="list">
+            <li>Team lead for three other developers to migrate existing services to a microservice architecture.</li>
+            <li>Participated in high-level architecture design discussions, as well as milestone planning.</li>
+            <li>Improving best practices in the use of AWS services, and REST API design.</li>
+        </ul>
+        <p><b>Software Engineer II</b> &ndash; Index Exchange (2017 &ndash; 2020)</p>
+        <ul class="list">
+            <li>Full-stack work, primarily focused on scalable, resilient microservices.</li>
+            <li>Served as project lead and scrum master on various projects.</li>
+            <li>Significant functional and validation test development experience.</li>
+        </ul>
+        <p><b>Software Developer</b> &ndash; DataESP, Inc. (2016)</p>
+        <ul class="list">
+            <li>Helped a small team to stabilise and release a data visualisation single-page application.</li>
+            <li>Participated in various company-wide architecture and design meetings.</li>
+        </ul>
+    </section>
+
+</main>
 
 <footer>
-<div class="footer-container">
-    <!-- ORCID -->
-    <a href="https://orcid.org/0009-0001-7883-7295" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align: top">
-        <img src="./img/ORCID-iD_icon_reversed_32x32.png" style="width: 28px; margin-inline-start: 0.5em" alt="ORCID iD icon"/>
-    </a>
-    <!-- Github SVG -->
-    <a href="https://github.com/ericleb010/scs-user-page">
-        <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 16 16" width="28" aria-hidden="true" class="d-block">
-            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-        </svg>
-    </a>
-    <!-- PGP key ID -->
-    <div>
-        <img src="https://img.shields.io/badge/PGP-86B8529F318C267A-purple" />
+    <div class="footer-container">
+        <!-- ORCID -->
+        <a class="orcid-link" href="https://orcid.org/0009-0001-7883-7295" target="orcid.widget" rel="me noopener noreferrer">
+            <img class="orcid-icon" src="./img/ORCID-iD_icon_reversed_32x32.png" alt="ORCID iD icon"/>
+        </a>
+        <!-- Github SVG -->
+        <a href="https://github.com/ericleb010/scs-user-page" aria-label="GitHub repository">
+            <svg xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 0 16 16" width="28" aria-hidden="true" class="d-block">
+                <path fill="white" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+        <!-- PGP key ID -->
+        <div>
+            <img src="https://img.shields.io/badge/PGP-86B8529F318C267A-4d0099" alt="PGP key badge" />
+        </div>
+        <!-- Commit badge -->
+        <div id="commit-badge" aria-hidden="false"></div>
     </div>
-    <!-- Commit badge -->
-    <div id="commit-badge"></div>
-</div>
 </footer>
 
 </body>
@@ -102,9 +127,9 @@
             const versionDesc = contents.trim();
             const version = versionDesc.split(" ")[0];
 
-            let badgeColor = "green"
+            let badgeColor = "009933"
             if (versionDesc != version) {
-                badgeColor = "red"
+                badgeColor = "cc2900"
             }
 
             const anchorNode = document.createElement("a");
